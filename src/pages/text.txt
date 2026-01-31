@@ -1,0 +1,6 @@
+pages
+    ㄴ [페이지 이름] ex) main
+        ㄴpage.jsx
+        ㄴ page.styled.js
+
+위와 같은 구조로 폴더 생성
