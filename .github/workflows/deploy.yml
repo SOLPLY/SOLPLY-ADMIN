@@ -23,8 +23,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
         with:
           source-directory: "output"
-          destination-github-username: sem201 #또는 사용할 깃허브 유저이름
-          destination-repository-name: #[repo 이름]
+          destination-github-username: pedro0527 #또는 사용할 깃허브 유저이름
+          destination-repository-name: SOLPLY-ADMIN #[repo 이름]
           user-email: ${{secrets.EMAIL}} # 깃허브 시크릿에 EMAIL값으로 받기
           commit-message: "배포 🐱‍🏍"
 
