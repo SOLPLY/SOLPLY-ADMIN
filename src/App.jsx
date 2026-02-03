@@ -1,20 +1,25 @@
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
+import GlobalStyle from "./styles/global";
 import styled from "styled-components";
 import logo from "./assets/icons/logo.svg";
-
 function App() {
   return (
     <>
-      <Wrapper>
-        <Container>
-          <Title>관리자 로그인</Title>
-          <Content>어드민 시스템에 로그인하세요</Content>
-          <KaKaoContainer>
-            <Icon src={logo} />
-            <Text>카카오 로그인</Text>
-          </KaKaoContainer>
-          <GuideText>운영자 전용 페이지입니다</GuideText>
-        </Container>
-      </Wrapper>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Wrapper>
+          <Container>
+            <Title>관리자 로그인</Title>
+            <Content>어드민 시스템에 로그인하세요</Content>
+            <KaKaoContainer>
+              <Icon src={logo} />
+              <Text>카카오 로그인</Text>
+            </KaKaoContainer>
+            <GuideText>운영자 전용 페이지입니다</GuideText>
+          </Container>
+        </Wrapper>
+      </ThemeProvider>
     </>
   );
 }

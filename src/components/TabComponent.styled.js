@@ -4,11 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: ${({ theme}) => theme.colors.white};
 `;
 
 export const Icon = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +18,6 @@ export const Icon = styled.div`
 export const Text = styled.span`
   font-size: 18px;
   text-align: center;
-  color: #222;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
