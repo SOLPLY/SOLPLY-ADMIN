@@ -18,7 +18,7 @@ export const theme = {
     // color: ${({ theme }) => theme.colors.색상};
 
     //나중에 필요시 추가하기
-    bg: "#FFFFFF", //배경색
+    bg: "#F9FAFB", //배경색
     black: "#000000",
     white: "#FFFFFF",
 
