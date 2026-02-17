@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  width: 25vw;
   background-color: ${({ theme}) => theme.colors.white};
 `;
 
