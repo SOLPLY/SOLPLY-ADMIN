@@ -5,7 +5,11 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: 10px;
   width: 25vw;
-  background-color: ${({ theme}) => theme.colors.white};
+  padding: 5%;
+  cursor: pointer;
+  background-color: ${({ active }) =>
+    active ? "#111827" : "transparent"};
+  color: ${({ active }) => (active ? "#fff" : "#111")};
 `;
 
 export const Icon = styled.div`
@@ -19,6 +23,6 @@ export const Icon = styled.div`
 export const Text = styled.span`
   font-size: 18px;
   text-align: center;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ active }) => (active ? "#fff" : "#111")};
 `;
 

@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { DefaultLayout } from "./layout/DefaultLayout";
 
 import { Login } from "./pages/login/Login";
-import { Town } from "./pages/town/Town";
+import Basic from "./pages/BasicStructure/Basic";
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     element: <DefaultLayout />,
     children: [
       { path: "", element: <Login /> },
-      { path: "town", element: <Town /> },
+      { path: "basic", element: <Basic /> },
     ],
   },
 ]);
