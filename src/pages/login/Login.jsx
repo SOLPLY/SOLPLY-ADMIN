@@ -5,7 +5,7 @@ import { useCustomNavigate } from "../../hooks/useCustomNavigate";
 export const Login = () => {
   const { goTo } = useCustomNavigate();
 
-  const goTown = (path) => {
+  const go = (path) => {
     goTo(path);
   };
 
@@ -15,7 +15,7 @@ export const Login = () => {
         <Container>
           <Title>관리자 로그인</Title>
           <Content>어드민 시스템에 로그인하세요</Content>
-          <KaKaoContainer onClick={() => goTown("/town")}>
+          <KaKaoContainer onClick={() => go("/basic")}>
             <Icon src={logo} />
             <Text>카카오 로그인</Text>
           </KaKaoContainer>
