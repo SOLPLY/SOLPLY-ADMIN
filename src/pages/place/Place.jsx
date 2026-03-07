@@ -1,13 +1,17 @@
+import { useState } from "react";
 import * as S from "./Place.styled";
+import PlaceModal from "./PlaceModal";
 
 const Place = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <S.Wrapper>
         <S.Title>장소 관리</S.Title>
         <S.Container>
           <S.Header>
-            <S.AddBtn>
+            <S.AddBtn onClick={() => setIsOpen(true)}>
               <span>+</span>
               장소 추가
             </S.AddBtn>
@@ -48,6 +52,7 @@ const Place = () => {
           </S.Table>
         </S.Container>
       </S.Wrapper>
+      {isOpen && <PlaceModal onClose={() => setIsOpen(false)} />}
     </>
   );
 };
