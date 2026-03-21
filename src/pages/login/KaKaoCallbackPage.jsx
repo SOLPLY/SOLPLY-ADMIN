@@ -15,7 +15,6 @@ const KakaoCallbackPage = () => {
           throw new Error("인가 코드가 없습니다.");
         }
 
-        // ✅ 명세서 기준 API 호출
         const response = await axiosInstance.post(
           "/api/auth/social/kakao/login",
           {
