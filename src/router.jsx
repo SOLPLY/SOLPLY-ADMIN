@@ -3,6 +3,7 @@ import { DefaultLayout } from "./layout/DefaultLayout";
 
 import { Login } from "./pages/login/Login";
 import Basic from "./pages/BasicStructure/Basic";
+import KakaoCallbackPage from "./pages/login/KakaoCallbackPage";
 
 export const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <Login /> },
       { path: "basic", element: <Basic /> },
+      { path: "kakao/callback", element: <KakaoCallbackPage /> },
     ],
   },
 ]);
