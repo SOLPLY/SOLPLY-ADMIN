@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import logo from "../../assets/icons/logo.svg";
-import { useCustomNavigate } from "../../hooks/useCustomNavigate";
 
 export const Login = () => {
-  const { goTo } = useCustomNavigate();
+  const kakaoLogin = () => {
+    const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY;
+    const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
 
-  const go = (path) => {
-    goTo(path);
+    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+
+    window.location.href = kakaoURL;
   };
 
   return (
@@ -15,7 +17,7 @@ export const Login = () => {
         <Container>
           <Title>관리자 로그인</Title>
           <Content>어드민 시스템에 로그인하세요</Content>
-          <KaKaoContainer onClick={() => go("/basic")}>
+          <KaKaoContainer onClick={kakaoLogin}>
             <Icon src={logo} />
             <Text>카카오 로그인</Text>
           </KaKaoContainer>
