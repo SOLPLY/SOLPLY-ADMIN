@@ -3,12 +3,8 @@ import logo from "../../assets/icons/logo.svg";
 
 export const Login = () => {
   const kakaoLogin = () => {
-    const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY;
-    const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
-
-    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-
-    window.location.href = kakaoURL;
+    const VITE_SERVER_API = import.meta.env.VITE_SERVER_API.replace(/\/$/, "");
+    window.location.href = `${VITE_SERVER_API}/api/admin/auth/kakao`;
   };
 
   return (
